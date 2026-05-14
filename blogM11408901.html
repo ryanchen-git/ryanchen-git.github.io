@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>當符號學教授走進矽谷：丹·布朗新作《祕密中的祕密》深度拆解</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            50: '#fffdf0',
+                            100: '#fef9c3',
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        },
+                        slate: {
+                            850: '#1e293b',
+                            950: '#020617',
+                        }
+                    },
+                    fontFamily: {
+                        display: ['Outfit', 'Noto Sans TC', 'sans-serif'],
+                        body: ['Noto Sans TC', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #020617;
+            color: #f8fafc;
+            overflow-x: hidden;
+        }
+
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #ea580c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-mask {
+            mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
+        }
+
+        .section-accent {
+            position: relative;
+        }
+        .section-accent::before {
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, #fbbf24, transparent);
+            border-radius: 2px;
+        }
+
+        .parallax-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 30%, rgba(245, 158, 11, 0.05) 0%, transparent 40%),
+                        radial-gradient(circle at 80% 70%, rgba(59, 130, 246, 0.05) 0%, transparent 40%);
+            z-index: -1;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #020617;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="font-body custom-scrollbar">
+
+    <div class="parallax-bg"></div>
+
+    <!-- Top Navigation -->
+    <nav class="fixed top-0 w-full z-50 px-6 py-4 flex justify-between items-center glass-card border-t-0 border-x-0">
+        <div class="flex items-center gap-2">
+            <div class="w-8 h-8 bg-gold-500 rounded-lg flex items-center justify-center font-display font-bold text-slate-950 text-xl">D</div>
+            <span class="font-display font-semibold tracking-wider text-sm hidden sm:block uppercase">Review Insight</span>
+        </div>
+        <div class="text-xs font-display text-slate-400 tracking-widest">M11408901</div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative w-full h-[85vh] flex items-end overflow-hidden pt-20">
+        <div class="absolute inset-0 z-0">
+            <img src='https://opal.google/board/blobs/6a3c256a-0ad8-4dad-9280-024ef34e8dfc' alt='media_1' class="w-full h-full object-cover opacity-60 scale-105 transition-transform duration-1000 hover:scale-100" />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+        </div>
+        
+        <div class="relative z-10 w-full max-w-5xl mx-auto px-6 pb-16 lg:pb-24">
+            <div class="inline-block px-3 py-1 mb-6 rounded-full border border-gold-500/30 bg-gold-500/10 text-gold-400 text-xs font-bold tracking-widest uppercase animate-pulse">
+                New Publication
+            </div>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-display font-black leading-tight mb-6">
+                當符號學教授走進矽谷：<br/>
+                <span class="gradient-text">丹·布朗新作《祕密中的祕密》</span>
+            </h1>
+            <div class="flex items-center gap-6 text-slate-300">
+                <div class="flex flex-col">
+                    <span class="text-xs uppercase tracking-widest text-gold-500/70 mb-1">Author / ID</span>
+                    <span class="font-display font-medium">Dan Brown Review / M11408901</span>
+                </div>
+                <div class="h-8 w-px bg-slate-700"></div>
+                <div class="flex flex-col">
+                    <span class="text-xs uppercase tracking-widest text-gold-500/70 mb-1">Theme</span>
+                    <span class="font-display font-medium">Digital Soul & Prague</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 py-20 relative">
+        
+        <!-- Intro Bento Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-24">
+            <div class="md:col-span-8 glass-card p-8 md:p-12 rounded-3xl relative overflow-hidden group">
+                <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                    <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" class="text-gold-500"><circle cx="12" cy="12" r="10"/><path d="M12 2v20M2 12h20"/></svg>
+                </div>
+                <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                    <span class="w-2 h-8 bg-gold-500 rounded-full"></span>
+                    開場白：那個帶著米老鼠圖騰錶的男人
+                </h2>
+                <p class="text-slate-300 leading-relaxed text-lg mb-4">
+                    「久等了！」各位蘭登教授的忠實讀者。
+                </p>
+                <p class="text-slate-300 leading-relaxed">
+                    當我們以為羅伯·蘭登（Robert Langdon）或許該在哈佛大學安穩地教書、享受退休生活時，這位總是運氣不太好（或者說太好）的教授又被捲入了全球危機。這一次，他終於不再只是穿梭於義大利的古老教堂或巴黎的博物館，而是把行李收一收，踏進了充滿波希米亞神祕氣息的捷克首都——布拉格。
+                </p>
+            </div>
+            <div class="md:col-span-4 bg-gold-500/10 border border-gold-500/20 p-8 rounded-3xl flex flex-col justify-center items-center text-center animate-float">
+                <span class="text-5xl mb-4">⛪</span>
+                <p class="italic text-gold-100 font-light leading-relaxed">
+                    "如果你對「古老符號尬上現代危機」毫無抵抗力，那麼這次蘭登教授的第六次冒險，絕對值得你把沙發調整到最舒服的角度。"
+                </p>
+            </div>
+        </div>
+
+        <!-- The Plot Section -->
+        <section class="mb-32">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl font-display font-bold mb-8 text-white flex flex-col">
+                        <span class="text-sm font-normal text-gold-500 tracking-[0.3em] uppercase mb-2">Technology & Spirit</span>
+                        這本新書在講啥？
+                    </h2>
+                    <div class="space-y-6 text-slate-300">
+                        <p class="leading-relaxed">
+                            《祕密中的祕密》（The Secret of Secrets）將場景拉到了神祕的布拉格。這回蘭登教授不是去朝聖，而是受邀參加一場關於「人類意識」的突破性科學峰會。
+                        </p>
+                        <div class="glass-card p-6 rounded-2xl border-l-4 border-l-gold-500">
+                            <h3 class="font-bold text-white mb-2 text-xl italic">「靈魂模擬技術」</h3>
+                            <p class="text-sm">如果人類的意識、記憶甚至「靈魂」都能透過量子計算進行編碼、數位化，並在電腦中永生，這對宗教與哲學將是多大的衝擊？</p>
+                        </div>
+                        <p class="leading-relaxed">
+                            當然，丹·布朗的公式不會缺席：主講科學家在聚光燈下離奇身亡，現場留下了一堆跟靈魂、密碼有關的符號碎片。這次蘭登的隊友換成了一位冷靜、專業的神經科學家，兩人要在布拉格的古老街道中，用 16 世紀的煉金術知識去破解最尖端的量子編碼。
+                        </p>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-gold-500/20 blur-3xl rounded-full"></div>
+                    <div class="relative glass-card rounded-3xl overflow-hidden aspect-[4/5] flex items-center justify-center p-8">
+                        <div class="absolute inset-0 opacity-10 flex items-center justify-center pointer-events-none">
+                            <div class="w-full h-full border-[1px] border-gold-500 rounded-full scale-110"></div>
+                            <div class="absolute w-2/3 h-2/3 border-[1px] border-gold-500/50 rounded-full"></div>
+                        </div>
+                        <div class="text-center z-10">
+                            <div class="text-6xl mb-6">👁️</div>
+                            <h4 class="text-2xl font-display font-bold text-gold-400 mb-2">碰撞與火花</h4>
+                            <p class="text-slate-400 text-sm">老派符號愛好者<br/>×<br/>現代科技宅</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prague Section -->
+        <section class="mb-32 relative">
+            <div class="absolute -left-20 top-0 text-[10rem] font-black text-white/5 pointer-events-none select-none">PRAGUE</div>
+            <div class="section-accent pl-8">
+                <h2 class="text-3xl font-display font-bold mb-12 text-white">
+                    穿越時空找線索：布拉格，魔幻之城的歷史能量
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Point 1 -->
+                    <div class="glass-card p-8 rounded-2xl hover:translate-y-[-8px] transition-all duration-300 group">
+                        <div class="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center mb-6 group-hover:bg-gold-500 transition-colors">
+                            <span class="text-gold-500 group-hover:text-slate-900 font-bold">01</span>
+                        </div>
+                        <h4 class="font-bold text-lg mb-3">泥人魔像 (Golem)</h4>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            16 世紀拉比洛伊如何用泥土捏出生命？這不就是古代版的 AGI 嗎？人類對「創造生命」的執著從未改變。
+                        </p>
+                    </div>
+                    <!-- Point 2 -->
+                    <div class="glass-card p-8 rounded-2xl hover:translate-y-[-8px] transition-all duration-300 group">
+                        <div class="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center mb-6 group-hover:bg-gold-500 transition-colors">
+                            <span class="text-gold-500 group-hover:text-slate-900 font-bold">02</span>
+                        </div>
+                        <h4 class="font-bold text-lg mb-3">魯道夫二世的實驗室</h4>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            天文學家克卜勒、第谷與無數煉金術士在同一座城裡工作，那是科學與神祕學邊界模糊的黃金時代。
+                        </p>
+                    </div>
+                    <!-- Point 3 -->
+                    <div class="glass-card p-8 rounded-2xl hover:translate-y-[-8px] transition-all duration-300 group">
+                        <div class="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center mb-6 group-hover:bg-gold-500 transition-colors">
+                            <span class="text-gold-500 group-hover:text-slate-900 font-bold">03</span>
+                        </div>
+                        <h4 class="font-bold text-lg mb-3">景點朝聖預警</h4>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            讀完書後，你絕對會想立刻訂票去參觀舊猶太公墓。老新猶太會堂的閣樓，是寫給布拉格最美的情書。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reader Review -->
+        <section class="mb-32 bg-slate-900/50 p-10 rounded-[3rem] border border-white/5">
+            <h2 class="text-3xl font-display font-bold mb-10 text-center">讀者老實說：這道「丹式料理」你買單嗎？</h2>
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="flex-1 glass-card p-8 rounded-2xl border-t-4 border-t-emerald-500">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="text-emerald-500 text-2xl">▲</span>
+                        <h4 class="font-bold text-xl">「真香」派</h4>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed">故事維持了一貫的「高壓、限時、解謎」風格，快節奏的轉場像是在看動作電影，布拉格的描寫美到讓人想原地出國。</p>
+                </div>
+                <div class="flex-1 glass-card p-8 rounded-2xl border-t-4 border-t-rose-500">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="text-rose-500 text-2xl">▼</span>
+                        <h4 class="font-bold text-xl">「公式累」派</h4>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed">資深書迷碎念：「又是英雄加美女專家？又是強大反派與驚人科學發現？」對於這種公式，有些人感到缺乏新意。</p>
+                </div>
+            </div>
+            <div class="mt-10 text-center text-slate-400 italic">
+                "這就像是珍珠奶茶。雖然你知道裡面是什麼味道，但每隔一段時間，你就是會想再點一杯。"
+            </div>
+        </section>
+
+        <!-- Controversy & Interactive Question -->
+        <section class="mb-32">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-3xl font-display font-bold mb-10 section-accent pl-8">吵架時間：靈魂真的能數位化嗎？</h2>
+                <div class="space-y-8 text-slate-300">
+                    <div class="flex gap-6">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-indigo-500/20 flex items-center justify-center text-indigo-400">⚖️</div>
+                        <div>
+                            <h4 class="font-bold text-white mb-1">宗教界 vs. 科技狂</h4>
+                            <p class="text-sm">如果靈魂可以被編碼成 0 與 1，那「神性」何在？宗教團體認為這是在貶低神聖的死亡。</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-cyan-500/20 flex items-center justify-center text-cyan-400">🧪</div>
+                        <div>
+                            <h4 class="font-bold text-white mb-1">科學真實性</h4>
+                            <p class="text-sm">引用的「量子意識」理論在科學界引起討論。虛構小說的魅力——它用想像力去試探科學的邊界。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-16 glass-card p-10 rounded-3xl text-center border-2 border-gold-500/30">
+                    <h3 class="text-2xl font-bold mb-6 italic">「假如你的靈魂能上傳到雲端，換取某種意義上的永生，你願意嗎？」</h3>
+                    <div class="flex justify-center gap-4">
+                        <button class="px-8 py-3 bg-gold-500 text-slate-950 font-bold rounded-full hover:bg-gold-400 transition-colors">我願意</button>
+                        <button class="px-8 py-3 border border-slate-600 rounded-full hover:bg-white/5 transition-colors">我再考慮</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Future Trends -->
+        <section class="mb-32">
+            <h2 class="text-3xl font-display font-bold mb-12 text-center underline decoration-gold-500 decoration-4 underline-offset-8">下一站，Netflix 見！</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-1 bg-gradient-to-br from-gold-500 to-indigo-600 rounded-3xl">
+                    <div class="bg-slate-950 p-6 rounded-[calc(1.5rem-1px)] h-full">
+                        <h4 class="text-gold-500 font-bold mb-4">影集化轉型</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">Netflix 計畫拍成 8 集限定影集。影集更能讓蘭登教授好好「說課」，避免電影版的時間壓縮。</p>
+                    </div>
+                </div>
+                <div class="p-1 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-3xl">
+                    <div class="bg-slate-950 p-6 rounded-[calc(1.5rem-1px)] h-full">
+                        <h4 class="text-purple-400 font-bold mb-4">創作重心偏移</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">丹·布朗已從單純挖掘「古代宗教祕密」轉向關注「未來科技對人類的衝擊」。</p>
+                    </div>
+                </div>
+                <div class="p-1 bg-gradient-to-br from-purple-600 to-gold-500 rounded-3xl">
+                    <div class="bg-slate-950 p-6 rounded-[calc(1.5rem-1px)] h-full">
+                        <h4 class="text-gold-500 font-bold mb-4">黑科技閱讀</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">推廣搭配 AR App。你在書裡讀到某個符號，拿起手機對著牆壁一照，符號就立體浮現。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <footer class="mt-20 py-20 border-t border-slate-800">
+            <div class="max-w-2xl mx-auto text-center">
+                <h2 class="text-3xl font-display font-black mb-6">準備好你的布拉格機票<br/><span class="text-gold-500">（或至少準備好沙發）</span></h2>
+                <p class="text-slate-400 leading-relaxed mb-10">
+                    在這個 AI 發展速度超越人類理解的年代，蘭登教授的這場布拉格之旅，或許正是我們這代人最需要的醒世寓言。
+                </p>
+                <div class="inline-flex flex-col items-center">
+                    <div class="w-16 h-px bg-gold-500 mb-6"></div>
+                    <p class="text-xs tracking-widest text-slate-500 uppercase">End of Article</p>
+                    <p class="text-xs tracking-widest text-slate-500 mt-2">SID: M11408901</p>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Scroll Progress -->
+    <div id="progress-bar" class="fixed top-0 left-0 h-1 bg-gold-500 z-[60]" style="width: 0%"></div>
+
+    <script>
+        window.onscroll = function() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("progress-bar").style.width = scrolled + "%";
+        };
+    </script>
+</body>
+</html>
