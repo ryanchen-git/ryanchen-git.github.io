@@ -788,22 +788,39 @@
                     if (!response.ok) throw new Error("No YouTube link found.");
                     return response.text();
                 })
-                .then(text => {
-                    const firstLine = text.trim().split('\n')[0];
-                    if (firstLine.includes("youtube") || firstLine.includes("youtu.be")) {
-                        const videoId = firstLine.includes("youtu.be")
-                            ? firstLine.split("youtu.be/")[1]
-                            : firstLine.split("v=")[1].split("&")[0];
-                        const iframeHTML = `
-                            <div class="container mt-5 mb-5">
-                                <div class="ratio ratio-16x9">
-                                    <iframe src="https://www.youtube.com/embed/${videoId}" 
-                                            title="YouTube video" allowfullscreen></iframe>
-                                </div>
-                            </div>`;
-                        document.body.insertAdjacentHTML("beforeend", iframeHTML);
-                    }
-                })
+.then(text => {
+    const firstLine = text.trim().split('\n')[0];
+
+    let videoId = null;
+
+    if (firstLine.includes("youtu.be/")) {
+        videoId = firstLine.split("youtu.be/")[1];
+    }
+    else if (firstLine.includes("/shorts/")) {
+        videoId = firstLine.split("/shorts/")[1].split("?")[0];
+    }
+    else if (firstLine.includes("v=")) {
+        videoId = firstLine.split("v=")[1].split("&")[0];
+    }
+
+    if (videoId) {
+        const iframeHTML = `
+            <div class="container mt-5 mb-5">
+                <div class="ratio ratio-16x9">
+                    <iframe
+                        src="https://www.youtube.com/embed/${videoId}"
+                        title="YouTube video"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>`;
+
+        document.body.insertAdjacentHTML(
+            "beforeend",
+            iframeHTML
+        );
+    }
+})
                 .catch(err => {
                     console.log("No YouTube video for this unit.");
                 });
